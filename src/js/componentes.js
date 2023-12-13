@@ -1,18 +1,23 @@
-import '../css/componentes.css';
-// import webpacklogo from '../assets/img/webpack-logo.png';
 
+let jugador = {
+    id: 0,
+    nombre: "",
+    resultado: [],
+};
 
-export const saludar = (nombre = 'sin nombre') => {
-    console.log('Creando etiqueta h1');
+function jugador_cargar(id, nombre, resultado) {
+    jugador.id = id;
+    jugador.nombre = nombre;
+    jugador.resultado = resultado;
+}
 
-    const h1 = document.createElement('h1');
-    h1.innerText = `Hola ${ nombre }!!! vale?`;
+let enJuego = {
+    // Incluir la información necesaria a guardar para reanudar la partida
+    // en caso de interrupción por cierre de la página web.
+    // dato1: [],
+    // dato2: 0
+}
 
-    document.body.append(h1);
-
-
-    // Img
-    // const img = document.createElement('img');
-    // img.src = webpacklogo;
-    // document.body.append( img );
+function enJuego_reset() {
+    // Reinicializar las propiedades a valores por defecto.
 }
